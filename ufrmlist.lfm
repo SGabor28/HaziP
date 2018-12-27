@@ -1,0 +1,55 @@
+object frmList: TfrmList
+  Left = 567
+  Height = 777
+  Top = 147
+  Width = 627
+  BorderStyle = bsSingle
+  Caption = 'Teljes lista'
+  ClientHeight = 777
+  ClientWidth = 627
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object sgGrid: TStringGrid
+    Left = 0
+    Height = 777
+    Top = 0
+    Width = 627
+    Align = alClient
+    ColCount = 4
+    Columns = <    
+      item
+        Title.Caption = 'Időpont'
+        Width = 60
+      end    
+      item
+        Title.Caption = 'Sz'
+        Width = 25
+      end    
+      item
+        Title.Caption = 'Tétel megnevezése'
+        Width = 440
+      end    
+      item
+        Title.Alignment = taRightJustify
+        Title.Caption = 'Összeg'
+        Width = 70
+      end>
+    FixedCols = 0
+    RowCount = 1
+    TabOrder = 0
+    TabStop = False
+    OnDrawCell = sgGridDrawCell
+    ColWidths = (
+      60
+      25
+      440
+      70
+    )
+    Cells = (
+      1
+      0
+      0
+      'Időpont'
+    )
+  end
+end
